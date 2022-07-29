@@ -1,6 +1,16 @@
 <?php 
-function request($request_info,$data)
-{
+
+//example 
+$data = "bob is loged in";
+	request("Login",$data);
+
+function request($request_info,$data  = null)
+{   
+    if($data == null and $request_info != null){
+        $data = $request_info;
+        $request_info = null;
+    }
+    
     $file = "log.txt";
     $test = "";
     if(!file_exists($file)){
@@ -15,10 +25,10 @@ function request($request_info,$data)
     }
     
 
-    if ($data != null) { 
-        return $data;}
+    // if ($data != null) { 
+    //     return $data;}
     
-	return false;
+	// return false;
 
 }
 
