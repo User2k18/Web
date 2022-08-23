@@ -15,3 +15,5 @@ better login + register + keys
 download 
 
 chat ???
+
+dark theme
